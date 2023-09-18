@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+
+    <style>
+        #img{width: 100%; 
+             max-width: 1200px;
+             margin: auto;
+             display: block;
+             position: relative;}
+        #img2{height: 100%; width: 100%;}
+         #message { position: absolute; top: 0;
+               left:0;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               width: 100%;
+               height: 100%;
+               margin:top;
+              }
+    </style>
+</head>
+<body>
+    
+    <div id="img">
+        <img src="ai.jpg" alt="ai" class="img-rounded" height="500px" width="500px" id="img2" style="opacity: 0.4;">
+
+        <div id="message" class="styling">
+        <form>
+            <h1>Artifical Intelligence</h1>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Password">
+              </div>
+            <div class="form-group form-check">
+                <label for="from-check-label">
+                   <input type="checkbox" class="form-check-input" name="Remember">Remember me
+                </label>
+            </div>
+            <button type="log in" class="btn btn-primary" ><a href="detail.html" style="color: white; text-decoration: none;">Log in</a></button>
+        </form>
+        </div>
+    </div>
+    
+</body>
+</html>
