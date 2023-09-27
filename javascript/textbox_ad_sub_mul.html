@@ -1,0 +1,48 @@
+<html>
+<script language="javascript">
+	function add()
+	{
+	var num1=parseInt(document.getElementById("n1").value);
+	var num2=parseInt(document.getElementById("n2").value);
+	var ans=num1+num2;
+	document.getElementById("res").innerHTML="additon = " + ans;
+	
+	}
+	function sub()
+	{
+	var num1=parseInt(document.getElementById("n1").value);
+	var num2=parseInt(document.getElementById("n2").value);
+	var ans=num1-num2;
+	document.getElementById("res").innerHTML="substraction = " + ans;
+	
+	}
+	function mul()
+	{
+	var num1=parseInt(document.getElementById("n1").value);
+	var num2=parseInt(document.getElementById("n2").value);
+	var ans=num1*num2;
+	document.getElementById("res").innerHTML="multiplication = " + ans;
+	
+	}
+	function div()
+	{
+	var num1=parseInt(document.getElementById("n1").value);
+	var num2=parseInt(document.getElementById("n2").value);
+	var ans=num1/num2;
+	document.getElementById("res").innerHTML="division = " + ans;
+	
+	}
+</script>
+	<form name="f1">
+	enter number1 : <input type=text id="n1" /> <br><br>
+	enter number2 : <input type=text id="n2" /> <br><br>
+	<input type=button value="add" onclick="add();" />
+	<input type=button value="sub" onclick="sub();" />
+	<input type=button value="mul" onclick="mul();" />
+	<input type=button value="div" onclick="div();" />
+	<br><br>
+	<span id="res" >Result :</span>
+	</form>
+
+
+</html>

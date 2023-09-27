@@ -1,0 +1,27 @@
+<html>
+    <form name="f1">
+    enter login details : <br><br>
+    username : <input type=text id="t1" /> <br><br>
+    password : <input type=password id="t2" /> <br><br>
+    <button type=button onclick="check();"> ok </button>
+    <div id="res" >--</div>
+    
+    </form>
+    <script language="javascript">
+    function check()
+    {
+     var u=document.getElementById("t1").value;
+     var p=document.getElementById("t2").value;
+     if(u=="admin" && p=="admin")
+     {
+     document.getElementById("res").innerHTML="login successfull";
+     }
+     else
+     {
+     document.getElementById("res").innerHTML="invalid credentials ! ";
+     }
+    }
+    
+    </script>
+</html>
+    

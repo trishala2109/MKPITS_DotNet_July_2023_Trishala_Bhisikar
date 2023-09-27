@@ -1,0 +1,25 @@
+<html>
+    <form name="f1">
+    enter age : <input type=text id="t1" /> <br><br>
+    <input type=button value="ok" onclick="check();" />
+    <br><br>
+    <span id="res" > ---</span>
+    
+    </form>
+    
+    <script language="javascript">
+    function check()
+    {
+    var age=document.getElementById("t1").value;
+    if(age >= 18)
+    {
+    document.getElementById("res").innerHTML="elegible to vote";
+    }
+    else 
+    {
+    document.getElementById("res").innerHTML="not elegible to vote";
+    }
+    }
+    </script>
+</html>
+    
