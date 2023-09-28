@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <form name="f1">
+        Enter Sublect 1 : <input type=text id="t1" /> <br><br>
+        Enter Subject 2 : <input type=text id="t2" /> <br><br>
+        Enter Subject 3 : <input type=text id="t3" /> <br><br>
+        <input type=button value="ok" onclick="check();" />
+        <br><br>
+        <span id="res" > ---</span>
+        
+        </form>
+        
+        <script language="javascript">
+        function check()
+        {
+        var subject1=parseFloat(document.getElementById("t1").value);
+        var subject2=parseFloat(document.getElementById("t2").value);
+        var subject3=parseFloat(document.getElementById("t3").value);
+
+        if(isNaN(subject1) || isNaN(subject2) || isNaN(subject3))
+        {
+        document.getElementById("res").innerHTML="enetr the marks";
+        }
+         
+         else
+        {
+            var total = subject1 + subject2 + subject3; 
+            document.getElementById("res").innerHTML="result = " + total;
+        }
+       
+        }
+     </script>
+     
+</head>
+<body>

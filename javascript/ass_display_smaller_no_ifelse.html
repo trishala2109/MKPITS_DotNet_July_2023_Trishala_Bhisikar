@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <form name="f1">
+        Enter number1 : <input type=text id="t1" /> <br><br>
+        Enter number2 : <input type=text id="t2" /> <br><br>
+        <input type=button value="ok" onclick="check();" />
+        <br><br>
+        <span id="res" > ---</span>
+        
+        </form>
+        
+        <script language="javascript">
+        function check()
+        {
+        var num1=document.getElementById("t1").value;
+        var num2=document.getElementById("t2").value;
+        if(num1 < num2)
+        {
+        document.getElementById("res").innerHTML="number 1 is smaller";
+        }
+         else 
+        {
+        document.getElementById("res").innerHTML="number 2 is smaller";
+        }
+        
+        }
+     </script>
+        
+</head>
+<body>

@@ -1,0 +1,21 @@
+<html>
+	<script language="javascript">
+	function circum()
+	{
+	var radius=document.getElementById("t1").value;
+	var circle=3.14*radius*radius;
+    document.getElementById("result").innerHTML="Circumfrance of Circle = " + circle;
+	alert("circumfrance of circle = " + circle);
+	}
+	</script>
+	<form name="f1">
+		enter number : <input type=text name="t1" /><br><br>
+		<input type=button value="ok" onclick="circum();" />
+        <br><br>
+		<span id="result" >--- </span>
+	</form>
+
+
+</html>
+
+

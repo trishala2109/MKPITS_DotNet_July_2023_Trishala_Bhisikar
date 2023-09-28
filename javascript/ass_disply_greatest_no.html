@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <form name="f1">
+        Enter number1 : <input type=text id="t1" /> <br><br>
+        Enter number2 : <input type=text id="t2" /> <br><br>
+        Enter number3 : <input type=text id="t3" /> <br><br>
+        <input type=button value="ok" onclick="check();" />
+        <br><br>
+        <span id="res" > ---</span>
+        
+        </form>
+        
+        <script language="javascript">
+        function check()
+        {
+        var num1=document.getElementById("t1").value;
+        var num2=document.getElementById("t2").value;
+        var num3=document.getElementById("t3").value;
+        if(num1 >= num2 && num1 >= num3)
+        {
+        document.getElementById("res").innerHTML="number 1 is greter";
+        }
+         else if (num2 >= num1 && num2 >= num3)
+        {
+        document.getElementById("res").innerHTML="number 2 is greater";
+        }
+         else
+        {
+            document.getElementById("res").innerHTML="number 3 is greater";  
+        }
+        }
+     </script>
+        
+</head>
+<body>
+    
+</body>
+</html>
