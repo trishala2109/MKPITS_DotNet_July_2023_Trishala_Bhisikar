@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<body>
+    <div class="jumboturn text-center">
+        <h1>Calculator</h1>
+    </div>
+    <div class="container">
+        <form name="f1">
+            <div class="form-group">
+                <input type="text" class="form-control text-center" name="t1" id="t1">
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" name="b1" class="form-control mt-2" onclick="one();">1</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b2" class="form-control mt-2" onclick="two();">2</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b3" class="form-control mt-2" onclick="three();">3</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b4" class="form-control  mt-2" onclick="add();">+</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button type="button" name="b5" class="form-control  mt-2" onclick="four();">4</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b6" class="form-control  mt-2" onclick="five();">5</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b7" class="form-control  mt-2" onclick="six();">6</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b8" class="form-control  mt-2" onclick="sub();">-</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button type="button" name="b9" class="form-control  mt-2" onclick="seven();">7</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b10" class="form-control  mt-2" onclick="eight();">8</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b11" class="form-control  mt-2" onclick="nine();">9</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b12" class="form-control  mt-2" onclick="mul();">*</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button type="button" name="b13" class="form-control  mt-2" onclick="zero();">0</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b14" class="form-control  mt-2" onclick="allclear();">AC</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b15" class="form-control  mt-2" onclick="equal();">=</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" name="b16" class="form-control  mt-2" onclick="divi();">/</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+<script language="javascript">
+    var pnum=0;
+    var cnum=0;
+    var result=0; 
+    var operator;
+    var empty=0;
+
+    function one()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="1";
+    }
+    function two()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="2";
+    }
+    function three()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="3";
+    }
+    function add()
+    {
+        pnum=parseInt(document.f1.t1.value);
+        document.f1.t1.value="+";
+    }
+    function four()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="4";
+    }
+    function five()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="5";
+    }
+    function six()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="6";
+    }
+    function sub()
+    {
+        pnum=parseInt(document.f1.t1.value);
+        document.f1.t1.value="-";
+    }
+    function seven()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="7";
+    }
+    function eight()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="8";
+    }
+    function nine()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="9";
+    }
+    function mul()
+    {
+        pnum=parseInt(document.f1.t1.value);
+        document.f1.t1.value="*";
+    }
+    function zero()
+    {
+        operator=document.f1.t1.value;
+        document.f1.t1.value="0";
+    }
+    function allclear()
+    {
+        empty=document.f1.t1.value;
+        document.f1.t1.value="AC";
+    }
+    function divi()
+    {
+        pnum=parseInt(document.f1.t1.value);
+        document.f1.t1.value="/";
+    }
+    function equal()
+    {
+        cnum=parseInt(document.f1.t1.value);
+        if(operator=="+")
+        {
+            document.getElementById("t1").value=pnum+cnum;
+        }
+        else if(operator=="-")
+        {
+            document.getElementById("t1").value=pnum-cnum;
+        }
+       else if(operator=="*")
+        {
+            document.getElementById("t1").value=pnum*cnum;
+        }
+        else if(operator=="/")
+        {
+            document.getElementById("t1").value=pnum/cnum;
+        }
+    }
+
+</script>
+</html>
