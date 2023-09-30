@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="jumboturn text-center">
+        <h1>ATM</h1>
+    </div>
+    <div class="container">
+        <form name="f1">
+            <div class="form-group">
+                <h4>Enter Amount:-</h4>
+                <input type="text" class="form-control text-center" name="t1" id="t1">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Choice Any One:-</label>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="atm" id="choice1" value="deposite">
+                <label class="form-check-label" for="choice1" onclick="deposite()">
+                Deposite
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="atm" id="choice2" value="withdrwal">
+                <label class="form-check-label" for="choice2" onclick="withdrawl()">
+                Withdrwal
+                </label>
+                </div>
+            </div>
+
+            <div class="form-group mt-2">
+                <button class="btn btn-primary" type=button onclick="display();">OK </button>
+             </div>
+                
+        </form>
+    </div>
+
+    <div id="result"></div>
+</body>
+<script>
+    var bal=1000;
+
+    function display()
+    {
+        var amt=parseInt(document.f1.t1.value);
+        var result;
+    }
+</script>
+</html>
