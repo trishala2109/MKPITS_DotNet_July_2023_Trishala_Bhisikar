@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quize Qusetions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="jumboturn text-center">
+        <h1>Quize Qusetions</h1>
+    </div>
+    <div class="container">
+        <form name="f1">
+            <div class="form-group">
+                <label for="question1">
+                    <h6>Qusetions 1 :- Capita of India</h6>
+                </label>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question1" id="q1choice1" value="delhi">
+                                <label class="form-check-label" for="q1choice1" onclick="india()">
+                                   Delhi
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                         <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question1" id="q1choice2" value="nagpur">
+                                 <label class="form-check-label" for="q1choice2" onclick="india()">
+                                   Nagpur
+                                 </label>
+                         </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="form-group">
+                <label for="question2">
+                    <h6>Qusetions 2 :- Capita of Maharashtra</h6>
+                </label>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question2" id="q2choice1" value="nagpur">
+                                <label class="form-check-label" for="q2choice1" onclick="maharashtra()">
+                                   Nagpur
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                         <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question2" id="q2choice2" value="mumbai">
+                                 <label class="form-check-label" for="q2choice2" onclick="maharashtra()">
+                                   Mumbai
+                                 </label>
+                         </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="form-group">
+                <label for="question3">
+                    <h6>Qusetions 3 :- Capita of Madhy pradesh</h6>
+                </label>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question3" id="q3choice1" value="bhopal">
+                                <label class="form-check-label" for="q3choice1" onclick="mp()">
+                                   Bhopal
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                         <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question2" id="q3choice2" value="nagpur">
+                                 <label class="form-check-label" for="q3choice2" onclick="mp()">
+                                   Nagpur
+                                 </label>
+                         </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" type=button onclick="display();">Submit</button>
+                </div>
+                
+        </form>
+    </div>
+
+    <div class="container">
+        <h5>Performance</h5>
+            <div class="row">
+                <div class="col">
+                    Qusetions 1 : <span id="q1result"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                     Qusetions 2 : <span id="q2result"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Qusetions 3 : <span id="q3result"></span>
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>
+
+<script language="javascript">
+    function display()
+    {
+        var q1Answer = document.querySelector('input[name="question1"]:checked').value;
+        var q2Answer = document.querySelector('input[name="question2"]:checked').value;
+        var q3Answer = document.querySelector('input[name="question3"]:checked').value;
+        var score = 0;
+
+        if (q1Answer === "delhi") 
+        {
+            document.getElementById("q1result").textContent = "Correct";
+            score++;
+        } 
+        else
+        {
+            document.getElementById("q1result").textContent = "Incorrect";
+        }
+
+        if (q2Answer === "mumbai")
+        {
+            document.getElementById("q2result").textContent = "Correct";
+            score++;
+        } 
+        else
+        {
+            document.getElementById("q2result").textContent = "Incorrect";
+        }
+
+        if (q3Answer === "bhopal")
+        {
+            document.getElementById("q3result").textContent = "Correct" ;
+            score++;
+        } 
+        else 
+        {
+            document.getElementById("q3result").textContent = "Incorrect";
+        }
+        alert("Your score:" + score + " out of 3");
+        
+    }
+</script>
+
