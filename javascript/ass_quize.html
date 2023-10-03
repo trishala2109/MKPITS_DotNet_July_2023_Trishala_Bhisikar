@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="jumboturn text-center">
+    <div class="jumbotron text-center">
         <h1>Quize Qusetions</h1>
     </div>
     <div class="container">
@@ -115,10 +115,18 @@
                     Qusetions 3 : <span id="q3result"></span>
                 </div>
             </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col" id="res">
+                   <b>result:</b>
+                </div>
+            </div>
     </div>
 
 </body>
-</html>
+
 
 <script language="javascript">
     function display()
@@ -157,8 +165,10 @@
         {
             document.getElementById("q3result").textContent = "Incorrect";
         }
-        alert("Your score:" + score + " out of 3");
+        // alert("total marks out of 3 :" + score);
         
+        document.getElementById("res").innerHTML= "Total marks out of 3 :" + score;
     }
 </script>
 
+</html>

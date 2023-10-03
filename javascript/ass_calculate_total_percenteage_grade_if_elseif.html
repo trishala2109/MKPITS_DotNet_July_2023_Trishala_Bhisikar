@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    Enter Subject 1 marks:-<input type="text" id="t1"/><br><br>
+    Enter Subject 2 marks:-<input type="text" id="t2"/><br><br>
+    Enter Subject 3 marks:-<input type="text" id="t3"/><br><br>
+    <button onclick="cal()">Result </button><br><br>
+    Total:-<span id="total"></span><br><br>
+    Percentage:-<span id="per"></span><br><br>
+    Grade:-<span id="grade"></span><br>
+</body>
+
+<script type="text/javascript">
+    function cal()
+    {
+        var s1=parseFloat(document.getElementById("t1").value);
+        var s2=parseFloat(document.getElementById("t2").value);
+        var s3=parseFloat(document.getElementById("t3").value);
+        var total=s1+s2+s3;
+        document.getElementById("total").innerText=total;
+
+        var percentage=parseFloat(total/300)*100;
+        document.getElementById("per").innerText=percentage;
+        if(percentage>=75)
+        {
+            document.getElementById("grade").innerText="distinction";
+        }
+        else if(percentage>=60 && percentage < 75)
+        {
+            document.getElementById("grade").innerText="first division";
+        }
+        else if(percentage>=40 && percentage < 60)
+        {
+            document.getElementById("grade").innerText="second division";
+        }
+        else
+        {
+            document.getElementById("grade").innerText="failed";
+        }
+
+    }
+
+</script>
+</html>

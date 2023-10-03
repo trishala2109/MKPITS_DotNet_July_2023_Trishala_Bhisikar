@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="jumboturn text-center">
+    <div class="jumbotron text-center">
         <h1>ATM</h1>
     </div>
     <div class="container">
@@ -26,17 +26,17 @@
                 <div class="row">
                     <div class="col">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="atm" id="choice1" value="deposite">
-                                <label class="form-check-label" for="choice1" onclick="deposite()">
-                                   Deposite
+                            <input class="form-check-label" type="radio" name="atm" id="d1" value="deposit">
+                                <label for="d1">
+                                   Deposit
                                 </label>
                         </div>
                     </div>
 
                     <div class="col">
                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="atm" id="choice2" value="withdrwal">
-                                 <label class="form-check-label" for="choice2" onclick="withdrawl()">
+                            <input class="form-check-label" type="radio" name="atm" id="d2" value="withdrwal">
+                                 <label for="d2">
                                    Withdrwal
                                  </label>
                          </div>
@@ -45,22 +45,50 @@
             </div>
 
             <div class="form-group mt-2">
-                <button class="btn btn-primary" type=button onclick="display();">OK </button>
+                <button class="btn btn-primary" type=button onclick="display();">Submit</button>
              </div>
-                
+              
+            <div class="container">
+                <div class="row mt-5">
+                    <span id="result">Show</span>
+                </div>
+            </div>
+
         </form>
     </div>
 
-    <div id="result"></div>
 </body>
-</html>
+
 
 <script language="javascript">
     var bal=1000;
+    var amt;
+    var result;
+    var ans;
 
     function display()
     {
-        var amt=parseInt(document.f1.t1.value);
-        var result;
+         amt=parseInt(document.getElementById("t1").value);
+        var r=document.getElementsByName("atm");
+        for(i=0;i<r.length;i++)
+        {
+            if(r[i].checked)
+            {
+                ans=r[i].value;
+                //alert(ans);
+            }
+        }
+        
+        if(ans=="deposit")
+        {
+            bal=bal+amt;
+        }
+        else if(ans=="withdrawl")
+        {
+            bal=bal-amt;
+        }
+        document.getElementById("result").innerHTML="balance :" + bal;
     }
 </script>
+
+</html>
