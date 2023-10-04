@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Product Name :-<input type="text" id="t1"/><br><br>
+    Enter Product Rate :-<input type="text" id="t2"/><br><br>
+    Enter Product Quantity :-<input type="text" id="t3"/><br><br>
+    <input type="button" onclick="display()" value="calculate total amount"><br><br>
+
+    <span id="result">Result</span>
+</body>
+<script language="javascript">
+    function display()
+    {
+        var productname = document.getElementById("t1").value;
+        var productrate = parseFloat(document.getElementById("t2").value);
+        var quantity = parseInt(document.getElementById("t3").value);
+
+            // Calculate total amount
+            var total = productrate * quantity;
+
+            // Display result
+            var result = document.getElementById("result").innerHTML = "Total Amount for :"+ total;
+    }
+
+</script>
+</html>

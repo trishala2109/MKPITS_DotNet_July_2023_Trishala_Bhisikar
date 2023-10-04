@@ -135,8 +135,9 @@
         var q2Answer = document.querySelector('input[name="question2"]:checked').value;
         var q3Answer = document.querySelector('input[name="question3"]:checked').value;
         var score = 0;
-
-        if (q1Answer === "delhi") 
+        
+        //question 1
+        if (q1Answer == "delhi") 
         {
             document.getElementById("q1result").textContent = "Correct";
             score++;
@@ -146,7 +147,8 @@
             document.getElementById("q1result").textContent = "Incorrect";
         }
 
-        if (q2Answer === "mumbai")
+        //question 2
+        if (q2Answer == "mumbai")
         {
             document.getElementById("q2result").textContent = "Correct";
             score++;
@@ -156,7 +158,8 @@
             document.getElementById("q2result").textContent = "Incorrect";
         }
 
-        if (q3Answer === "bhopal")
+        //question 3
+        if (q3Answer == "bhopal")
         {
             document.getElementById("q3result").textContent = "Correct" ;
             score++;

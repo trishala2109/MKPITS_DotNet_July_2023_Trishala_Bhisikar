@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smallest No</title>
+</head>
+<body>
+    Enter 1 Number :-<input type="text" id="t1"/><br><br>
+    Enter 2 Number :-<input type="text" id="t2"/><br><br>
+    <input type="button" onclick="display()" value="submit"><br><br>
+
+    <span id="result">Result</span>
+</body>
+
+<script language="javascript">
+    function display()
+    {
+        var num1=document.getElementById("t1").value;
+        var num2=document.getElementById("t2").value;
+
+        if (num1 == num2)
+         {
+            document.getElementById("result").innerHTML = "The numbers are equal";
+         } 
+         else 
+         {
+             document.getElementById("result").innerHTML = "The numbers are not equal";
+         }
+    }
+
+</script>
+</html>

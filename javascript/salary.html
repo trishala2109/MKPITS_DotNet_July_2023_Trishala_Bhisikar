@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary</title>
+</head>
+<body>
+    Enter Employee Name: <input type="text" id="t1"><br><br>
+    Enter Basic Salary: <input type="text" id="t2"><br><br>
+    <input type="button" onclick="display()" value="Calculate Total Salary"><br><br>
+
+    <span id="result">Result</span>
+
+    <script language="javascript">
+        function display() 
+        {
+            var name, salary, hra, da, total, result;
+        
+            name = document.getElementById("t1").value;
+            salary = parseFloat(document.getElementById("t2").value);
+
+            hra = 0.23 * salary;
+            da = 0.43 * salary;
+
+            total = hra + da + salary;
+
+            // Display result
+            result = document.getElementById("result").innerHTML = "Employee Name: " + name + "<br>" 
+            +"HRA: " + hra + "<br>" 
+            +"DA: " + da + "<br>"
+            + total;
+        }
+    </script>
+</body>
+</html>
