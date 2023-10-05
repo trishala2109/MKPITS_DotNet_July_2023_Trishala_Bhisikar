@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align=center >Grade</h1>
+    <hr>
+    <center>
+        <form name="f1" style="width:50%" >
+            <fieldset>
+                <legend>Calculation</legend>
+                Enter grade <input type=text name="n1" />
+                <br><br>
+        
+                <input type=button value="result" onclick="msg();" />
+                <br><br>
+
+                Result  : <span id="r1" name="res" ></span>
+            </fieldset>
+        </form>
+    </center>
+</body>
+
+<script type="text/javascript">
+
+    function msg() 
+    {
+        var grade,result;
+        grade=document.f1.n1.value;//parseInt function is used to convert string into integer
+
+        switch(grade)
+        {
+            case 'A' :
+                result=" A grade";
+                break;
+            case 'B' :
+                result=" B grade";
+                break;
+            case 'C' :
+                result=" C grade";
+                break;
+            default:
+                result="invalid grade";
+                break;
+        }
+
+        document.getElementById("r1").innerHTML=result;
+    }
+
+</script>
+</html>
