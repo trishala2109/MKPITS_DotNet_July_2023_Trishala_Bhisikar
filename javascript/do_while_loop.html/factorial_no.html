@@ -12,7 +12,7 @@
   
 <body>
     <div class="jumbotron text-center">
-        <h1>Prime Numbers</h1>
+        <h1>Factorial Numbers</h1>
     </div>
     <div class="container">
         <form class="form-group">
@@ -26,13 +26,20 @@
     </div>
     
 </body>
-
 <script type="text/javascript">
-
     function display()
     {
         var num=parseInt(document.getElementById("t1").value);
-        var prime;
-    }
+        var fact=1;
+        var i=num
 
+       do
+        {
+            fact=fact*i;
+            i--;
+        }
+        while(i>0)
+        document.getElementById("result").innerHTML=fact;
+    }
 </script>
+</html>

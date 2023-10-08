@@ -12,27 +12,32 @@
   
 <body>
     <div class="jumbotron text-center">
-        <h1>Prime Numbers</h1>
+        <h1>Even Numbers</h1>
     </div>
     <div class="container">
-        <form class="form-group">
-            <label for="t1" class="mt-2">Enter Number </label>
-            <input type="text" class="form-control mt-2" id="t1"/>
-            <button type="button" class="btn-secondary mt-4" onclick="display();">
-                Submit
-            </button>
-            <div id="result">Result:</div>
-        </form>
+        <button type="button" class="btn-secondary mt-2" onclick="display();">
+            Submit
+        </button>
+        <div id="result" class="mt-2"> Result:</div>
     </div>
-    
+
 </body>
 
 <script type="text/javascript">
 
     function display()
     {
-        var num=parseInt(document.getElementById("t1").value);
-        var prime;
-    }
+        var result;
 
-</script>
+        for(i=2; i<=100; i++)
+        {
+            if(i%2==0)
+            {
+                result += i +"<br>";
+            }
+        }
+        document.getElementById("result").innerHTML=result;
+    }
+    </script>
+</html>
+

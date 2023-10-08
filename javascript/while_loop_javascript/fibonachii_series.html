@@ -12,12 +12,14 @@
   
 <body>
     <div class="jumbotron text-center">
-        <h1>Prime Numbers</h1>
+        <h1>Fibonachii Series</h1>
     </div>
     <div class="container">
         <form class="form-group">
             <label for="t1" class="mt-2">Enter Number </label>
             <input type="text" class="form-control mt-2" id="t1"/>
+            <label for="t2" class="mt-2">Enter Number </label>
+            <input type="text" class="form-control mt-2" id="t2"/>
             <button type="button" class="btn-secondary mt-4" onclick="display();">
                 Submit
             </button>
@@ -28,11 +30,30 @@
 </body>
 
 <script type="text/javascript">
-
     function display()
     {
-        var num=parseInt(document.getElementById("t1").value);
-        var prime;
-    }
+        var num1 = parseInt(document.getElementById("t1").value);
+        var num2 = parseInt(document.getElementById("t2").value);
+        var result= num1 + "," + num2;
+        var i=1;
+       
+        while(i <= 100) 
+        {
+            var total = num1 + num2;
+            if (total <= 100) 
+            {
+                result += ", " + total;
+                num1 = num2;
+                num2 = total;
+            } 
+            else 
+            {
+                break;
+            }
+           i++; 
+        }
 
+        document.getElementById("result").innerHTML = result;
+    }
 </script>
+</html>
