@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter First Name : <input type=text id="t1" name="t1" onkeypress="check();"/><br><br>
+
+    Enter Last Name : <input type=text id="t2" name="t2"/><br><br>
+
+    <button type=button>Submti</button>
+    <br><br>
+
+    <span id="res"></span>
+
+</body>
+
+    <script type="text/javascript">
+        var r="";
+
+	    function check()
+	    {
+	        r=document.getElementById("t1").value;
+	        document.getElementById("res").innerHTML +=r;
+	    }
+
+    </script>
+
+</html>

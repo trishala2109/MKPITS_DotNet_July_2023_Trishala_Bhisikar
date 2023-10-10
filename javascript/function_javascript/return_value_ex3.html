@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        Enter Subject 1 :- <input type="text" name="t1"/><br><br>
+        Enter Subject 2 :- <input type="text" name="t2"/><br><br>
+        Enter Subject 3 :- <input type="text" name="t3"/><br><br>
+        <input type="button" value="click" onclick="result(document.f1.t1.value,document.f1.t2.value,document.f1.t3.value)"/>
+        <br><br>
+
+        Total :- <span id="t"></span><br><br>
+        Percentage :- <span id="p"></span><br><br>
+
+    </form>
+</body>
+
+<script type="text/javascript">
+    function total(s1,s2,s3)
+    {
+        var total=parseFloat(s1)+parseFloat(s2)+parseFloat(s3);
+        return total;
+    }
+    
+    function per(total)
+    {
+        var per=(total/300.0)*100.0;
+        return per;
+    }
+
+    function result(s1,s2,s3)
+    {
+        var tot=total(s1,s2,s3);
+        document.getElementById("t").innerHTML= tot;
+
+        var percentage=per(tot);
+        document.getElementById("p").innerHTML= percentage;
+    }
+</script>
+</html>

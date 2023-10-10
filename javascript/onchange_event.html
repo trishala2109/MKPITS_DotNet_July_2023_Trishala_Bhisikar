@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Name :- <input id="fname" type= text onchange="myfunction()"/><br><br>
+    Last Name :- <input id="lname" type="text"/><br><br>
+
+    <span id="result"></span>
+</body>
+
+<script type="text/javascript">
+    function myfunction()
+    {
+        var x=document.getElementById("fname");
+        x.value=x.value.toUpperCase();
+        alert("first name" + x.value);
+        document.getElementById("result").innerHTML=x.value;
+    }
+
+</script>
+</html>
