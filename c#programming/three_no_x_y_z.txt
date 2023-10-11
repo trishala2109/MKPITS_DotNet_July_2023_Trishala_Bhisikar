@@ -1,0 +1,28 @@
+using System;
+
+namespace three_no_x_y_z
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            int x, y, z;
+            int result1, result2;
+            Console.WriteLine("Enter first number:");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter second number:");
+            y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter third number:");
+            z = Convert.ToInt32(Console.ReadLine());
+
+            result1 = (x + y) * z;
+            result2 = (x * y) + (y * z);
+
+            Console.WriteLine("Result 1 =" + result1);
+            Console.WriteLine("Result 2 =" + result2);
+            Console.ReadKey();
+    }
+    }
+}

@@ -1,0 +1,17 @@
+using System;
+
+namespace enter_name
+{
+    internal class Program
+    {
+        public static void Main()
+        {
+            string name;
+            Console.WriteLine("Hello !");
+            Console.WriteLine("Enter name :-");
+            name = Console.ReadLine();
+            Console.Write("Hello ! " + name);
+            Console.ReadKey();
+        }
+    }
+}

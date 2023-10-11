@@ -1,0 +1,22 @@
+using System;
+
+namespace three_no_multiplication
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, num3, result;
+            Console.WriteLine("Enter the First Number :-");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Second Number :-");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Third Number :-");
+            num3 = Convert.ToInt32(Console.ReadLine());
+            result = num1*num2*num3;
+            Console.WriteLine("Multiplication of Number =" + result);
+            Console.ReadKey();
+        }
+    }
+}
+

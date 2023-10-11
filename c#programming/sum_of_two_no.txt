@@ -1,0 +1,20 @@
+using System;
+
+namespace sum_of_two_no
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, result;
+            Console.WriteLine("Enter the First Number :-");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Second Number :-");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            result = num1 + num2;
+            Console.WriteLine("Sum of two Number =" + result);
+            Console.ReadKey();
+        }
+    }
+}
+
