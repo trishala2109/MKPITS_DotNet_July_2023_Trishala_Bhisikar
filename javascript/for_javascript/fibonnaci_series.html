@@ -34,16 +34,16 @@
     {
         var num1 = parseInt(document.getElementById("t1").value);
         var num2 = parseInt(document.getElementById("t2").value);
-        var result=num1 + "," +num2 ;
+        var result ;
 
         for (var i = 2; i <= 100; i++) 
         {
-            var total = num1 + num2;
-            if (total <= 100) 
+            var fibo = num1 + num2;
+            if (fibo <= 100) 
             {
-                result += ", " + total;
+                result += ", " + fibo;
                 num1 = num2;
-                num2 = total;
+                num2 = fib;
             } 
             else 
             {
