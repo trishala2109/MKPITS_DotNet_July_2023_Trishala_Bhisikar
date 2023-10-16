@@ -9,8 +9,7 @@ namespace q6_x_y
     internal class Program
     {
         static void Main(string[] args)
-        {
-             
+        { 
             int y;
             Console.WriteLine("Enter the value of y :-");
             y = Convert.ToInt32(Console.ReadLine());

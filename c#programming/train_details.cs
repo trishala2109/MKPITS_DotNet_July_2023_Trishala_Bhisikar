@@ -21,6 +21,7 @@ namespace train_details
             destination = Console.ReadLine();
 
             Console.WriteLine("Enter the Passenger Name :");
+
             passengername = Console.ReadLine();
 
             Console.WriteLine("Enter the Train Compartment (AC,Sleeper,Genral) :");
