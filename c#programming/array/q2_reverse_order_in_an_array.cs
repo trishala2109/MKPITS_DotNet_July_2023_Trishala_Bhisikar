@@ -12,7 +12,6 @@ namespace q2_reverse_order_in_an_array
         static void Main(string[] args)
         {
             int[] number = new int[3];
-            int temp;
 
             for (int i =0; i <= 2; i++)
             {
