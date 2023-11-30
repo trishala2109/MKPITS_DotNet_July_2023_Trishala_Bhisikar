@@ -84,7 +84,10 @@ namespace Assignment_calcultor
                 {
                     Console.WriteLine(e.ToString());
                 }
-                Console.WriteLine("Result : " + c.Result);
+                finally
+                {
+                    Console.WriteLine("Result : " + c.Result);
+                }
             }
             Console.ReadLine();
         }
