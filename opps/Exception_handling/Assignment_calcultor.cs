@@ -52,7 +52,7 @@ namespace Assignment_calcultor
                     Console.WriteLine("Enter Number 2 ");
                     int num2 = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Enter Operator (+,-,,/) ");
+                    Console.WriteLine("Enter Operator (+,-,*,/) ");
                     string Operator = Console.ReadLine();
 
 
