@@ -19,9 +19,6 @@ namespace Assignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string q1Answer = null;
-            string q2Answer = null;
-            string q3Answer = null;
             int Score = 0;
 
             if(radioButton1.Checked)
