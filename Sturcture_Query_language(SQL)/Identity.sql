@@ -1,0 +1,8 @@
+create table Employee1 (empID int  identity(1,1), empName varchar(20))
+
+select * from Employee1
+
+insert into Employee1 values ('Trish')
+insert into Employee1 values ('Trish')
+insert into Employee1 values ('Trish')
+insert into Employee1 values ('Trish')
