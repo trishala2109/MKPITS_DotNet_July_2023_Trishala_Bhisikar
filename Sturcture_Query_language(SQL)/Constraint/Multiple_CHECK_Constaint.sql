@@ -1,0 +1,16 @@
+CREATE TABLE PRODUCT
+                    (Product_ID INT IDENTITY PRIMARY KEY,
+					 Product_Name VARCHAR(50) NOT NULL,
+					 Unit_Prize DEC(10,2) CHECK(Unit_Prize > 0),
+					 Discount_Prize DEC(10,2) CHECK(Discount_Prize > 0),
+					 CHECK(Discount_Prize < Unit_Prize ));
+
+INSERT INTO PRODUCT VALUES('Keybord',120,90)
+INSERT INTO PRODUCT VALUES('Mouse',1000,500)
+INSERT INTO PRODUCT VALUES('Monitor',5000,6000)   ---ERROR BECAUSE DISCOUNT_PRIZE IS GREATER THAN UNIT_PRIZE
+INSERT INTO PRODUCT VALUES('Bike',500,100)
+INSERT INTO PRODUCT VALUES('Car',10000,5000)
+
+SELECT * FROM PRODUCT
+----------------------------------
+
